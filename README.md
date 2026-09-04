@@ -99,7 +99,22 @@ python -m backend.evaluation.evaluate_growth_engine   # revenue uplift measureme
 The Growth Engine's effect is measured, not asserted — `evaluate_growth_engine.py` runs a fixed synthetic buyer population through the real Merchant Agent and Growth Engine code, comparing baseline revenue (base product only) against AI-assisted revenue (with cross-sell, upsell, and promotion applied):
 
 ```
-[paste your evaluation script's actual output block here]
+============================================================
+GROWTH ENGINE EVALUATION
+============================================================
+Synthetic buyers evaluated: 20
+Cross-sell recommendations with real co-purchase data: 60
+Upsell recommendations offered: 0
+------------------------------------------------------------
+Baseline expected revenue (no growth engine): Rs.788,040
+AI-assisted expected revenue:                 Rs.881,784
+Expected discount cost given out:             Rs.95,998
+Net incremental revenue:                      Rs.93,744
+------------------------------------------------------------
+Baseline AOV:    Rs.39,402
+AI-assisted AOV: Rs.44,089
+Revenue uplift:  +11.9%
+============================================================
 ```
 
 ## Design notes
